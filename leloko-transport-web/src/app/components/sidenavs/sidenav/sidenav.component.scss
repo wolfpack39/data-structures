@@ -1,0 +1,108 @@
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: auto;
+  height: 100vh;
+  width: var(--sidenav-collapsed-width);
+  box-sizing: border-box;
+
+  // makes the sidenav stay in place, even when content is scrollable
+  position: sticky;
+  top: 0;
+
+  background-color: rgb(237, 241, 243);
+  
+  //border-right: 2px solid rgb(192, 192, 192);
+  &.is-expanded {
+    width: var(--sidenav-width);
+  }
+  transition: width 300ms cubic-bezier(.02, .68, .63, .98);
+
+}  
+
+.sidenav-body-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    $size: 25px;
+    width: $size;
+    height: $size;
+    margin: 0;
+    padding: 0;
+  
+    position: absolute;
+    top: 50px;
+    border: none;
+  
+    //background-color: white;
+  
+    cursor: pointer;
+    z-index: 10;
+  
+    &.is-flipped {
+      transform: rotate(-180deg);
+    }
+  
+    mat-icon {
+  
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+
+  .sidenav-body {
+    display: flex;
+    margin-top: 8em;
+    width: 100%;
+    overflow-x: hidden;
+  
+    &.slide-in-from-left {
+      animation: slideInFromLeft var(--sidenav-transition-duration) ease-out;
+    }
+    &.slide-in-from-right {
+      animation: slideInFromRight var(--sidenav-transition-duration) ease-out;
+    }
+
+    &.hide-view {
+      display: none;
+    }
+  }
+  
+}  
+
+
+

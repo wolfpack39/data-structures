@@ -1,0 +1,61 @@
+:host {
+    display: flex;
+    .card-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        //box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+        border-radius: 1em;
+        padding: 1em;
+        background-color: white;
+        border-left: 4px solid #8B58FF;
+        width: 300px;
+        height: 100px;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .icon-wrapper {
+                background-color: #EDE4FF;
+                //padding: 0.6em;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                mat-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #8B58FF;
+                    width: 2em;
+                    height: 2em;
+                }
+                margin-bottom: 1em;
+            }
+           
+            p {
+                
+            }
+        }
+
+        .right {
+            p {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                height: 10px;
+                width: 8em;
+                border: 1px solid green;
+                font-weight: 100;
+                border-radius: 6em;
+                margin: 0;
+                padding: 0.6em;
+                color: green;
+            }
+        }
+
+        
+    }
+}

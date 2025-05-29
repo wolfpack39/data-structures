@@ -1,0 +1,11 @@
+:host {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+  }
+  
+  .content {
+    flex-grow: 1;
+  
+    padding: 1rem;
+  }

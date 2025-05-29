@@ -1,0 +1,17 @@
+.button-style {
+    display: flex;
+    justify-content: flex-start;
+    width: 140%;
+    height: 2.6em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0;
+
+    &.active {
+        background-color: #D3E2FD;
+    }
+
+    &.hover {
+        color: red;
+    }
+}
